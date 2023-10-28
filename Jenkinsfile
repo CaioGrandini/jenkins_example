@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'mvn -f pom.xml'
+                sh 'mvn -f pom.xml -B -DskipTests clean package'
             }
             post {
                 success {
